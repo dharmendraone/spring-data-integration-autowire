@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="in.aw.beans.Address" id="address1" autowire-candidate="false">
+	<property name="area" value="Kolar colony"/>
+	<property name="city" value="Bhopal"/>
+	<property name="pincode" value="462016"/>
+	</bean>
+	
+	<bean class="in.aw.beans.Address" id="address2">
+	<property name="area" value="Kudiya pawai"/>
+	<property name="city" value="sidhi"/>
+	<property name="pincode" value="486775"/>
+	</bean>
+	
+    <bean class="in.aw.beans.Student" id="stdid" autowire="byType">
+    	<property name="name" value="Dharmendra Patel"/>
+    	<property name="email" value="dharmendra@gmail.com"/>
+    </bean>
+
+</beans>
